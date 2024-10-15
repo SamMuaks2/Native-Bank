@@ -1,0 +1,44 @@
+[
+    {
+        "id": "1",
+        "name": "Housing",
+        "amount": "955.75",
+        "percentage": "61"
+    },
+    {
+        "id": "2",
+        "name": "Food",
+        "amount": "300.55",
+        "percentage": "19"
+    },
+    {
+        "id": "3",
+        "name": "Saving",
+        "amount": "200.95",
+        "percentage": "13"
+    },
+    {
+        "id": "4",
+        "name": "Taxes",
+        "amount": "55.05",
+        "percentage": "12"
+    },
+    {
+        "id": "5",
+        "name": "Car",
+        "amount": "9955.75",
+        "percentage": "83"
+    },
+    {
+        "id": "6",
+        "name": "Dressing",
+        "amount": "50.35",
+        "percentage": "08"
+    },
+    {
+        "id": "7",
+        "name": "Maintenance",
+        "amount": "200.15",
+        "percentage": "13"
+    },
+]
