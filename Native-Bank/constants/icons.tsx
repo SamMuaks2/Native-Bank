@@ -22,4 +22,4 @@ export {
     ShopingCartIcon,
     SpotifyIcon,
     NetflixIcon,
-}
+};
