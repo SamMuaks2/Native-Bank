@@ -1,9 +1,13 @@
-import { FlatList, StyleSheet, Text, View } from "react-native";
+import { FlatList, ListRenderItemInfo, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Colors from "@/constants/Colors";
 import { IncomeType } from "@/types";
 
 const IncomeBlock = ({incomeList} : {incomeList: IncomeType}) => {
+    function renderItem(info: ListRenderItemInfo<any>): ReactElement<any, string | JSXElementConstructor<any>> | null {
+        throw new Error("Function not implemented.");
+    }
+
     return (
         <View>
             <Text style={{color: Colors.white, fontSize: 16,}}>
