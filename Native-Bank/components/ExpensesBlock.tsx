@@ -1,10 +1,20 @@
-import { StyleSheet, Text, View } from "react-native";
+import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
 import React from "react";
+import { ExpenseType } from "@/types";
+import Colors from "@/constants/Colors";
 
-const ExpenseBlock = () => {
+const ExpenseBlock = ({expenseList} : {expenseList : ExpenseType[]}) => {
+    const renderItem:ListRenderItem<Partial<ExpenseType>> = ({item,}) => {
+        return(
+            <View>
+                <Text style={{color: Colors.white}}>{item.name}</Text>
+            </View>
+        );
+    }
+
     return (
         <View>
-            <Text>In build mode</Text>
+            <FlatList data={expenseList} renderItem={renderItem} horizontal showsHorizontalScrollIndicator={false}/>
         </View>
     )
 }
