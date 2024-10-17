@@ -9,7 +9,7 @@ const ExpenseBlock = ({expenseList} : {expenseList : ExpenseType[]}) => {
         if(index == 0) {
             return(
                 <TouchableOpacity onPress={() => {}}>
-                    <View style={{flex: 1, borderWidth: 2, borderColor: '#666', borderStyle: 'dashed', alignItems: 'center', justifyContent: 'center', paddingHorizontal: 10, marginRight: 10,}}>
+                    <View style={styles.addItemBtn}>
                         <Feather name="plus" size={22} color={'#ccc'} />
                         <Text>Add Item</Text>
                     </View>
@@ -32,7 +32,7 @@ const ExpenseBlock = ({expenseList} : {expenseList : ExpenseType[]}) => {
     const staticPosition = [{name: "Add Item"}];
 
     return (
-        <View>
+        <View style={{paddingVertical: 20,}}>
             <FlatList data={staticPosition.concat(expenseList)} renderItem={renderItem} horizontal showsHorizontalScrollIndicator={false}/>
         </View>
     )
@@ -41,6 +41,17 @@ const ExpenseBlock = ({expenseList} : {expenseList : ExpenseType[]}) => {
 export default ExpenseBlock
 
 const styles = StyleSheet.create({
+    addItemBtn: {
+        flex: 1,
+        borderWidth: 2,
+        borderColor: '#666',
+        borderStyle: 'dashed',
+        borderRadius: 10,
+        alignItems: 'center',
+        justifyContent: 'center',
+        paddingHorizontal: 10,
+        marginRight: 10,
+    },
     expenseBlock: {
         justifyContent: 'center',
         alignItems: 'center',

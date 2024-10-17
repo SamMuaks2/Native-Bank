@@ -26,14 +26,14 @@
     {
         "id": "5",
         "name": "Car",
-        "amount": "9955.75",
+        "amount": "9,955.75",
         "percentage": "83"
     },
     {
         "id": "6",
         "name": "Dressing",
         "amount": "50.35",
-        "percentage": "08"
+        "percentage": "8.5"
     },
     {
         "id": "7",
