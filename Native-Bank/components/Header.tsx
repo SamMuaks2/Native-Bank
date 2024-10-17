@@ -11,9 +11,9 @@ const Header = () => {
             style={styles.userImage} 
             />
 
-            <View style={{marginLeft: 10}}>
+            <View style={styles.userTextWrapper}>
                 <Text style={{color:Colors.white, fontSize: 12}}>Hi, Shanty /*firstname as a function*/</Text>
-                <Text style={{color:Colors.white, fontSize: 16}}>Your <Text style={{fontWeight: '700'}}>Budget</Text></Text>
+                <Text style={{color:Colors.white, fontSize: 16}}>Your <Text style={styles.boldText}>Budget</Text></Text>
             </View>
             </View>
             
@@ -47,6 +47,12 @@ const styles = StyleSheet.create({
         height: 50,
         width: 50,
         borderRadius: 30
+    },
+    userTextWrapper: {
+        marginLeft: 10
+    },
+    boldText: {
+        fontWeight: '700'
     },
     btnWrapper: {
         borderColor: '#666',
