@@ -3,9 +3,11 @@ import { Tabs } from "expo-router";
 import { AntDesign, FontAwesome, SimpleLineIcons } from "@expo/vector-icons";
 import { View } from "react-native";
 import Colors from "@/constants/Colors";
+import { StatusBar } from "expo-status-bar";
 
 const Layout = () => {
   return (
+  <>
     <Tabs
       screenOptions={{
         tabBarStyle: {
@@ -29,17 +31,17 @@ const Layout = () => {
         tabBarInactiveTintColor: "#999",
         tabBarActiveTintColor: Colors.white,
       }}
-    >
+      >
       <Tabs.Screen
         name="index"
         options={{
           tabBarIcon: ({ color, size, focused }) => (
             <View
-              style={{
-                padding: 12,
-                borderRadius: 30,
-                backgroundColor: focused ? Colors.tintColor : Colors.grey,
-              }}
+            style={{
+              padding: 12,
+              borderRadius: 30,
+              backgroundColor: focused ? Colors.tintColor : Colors.grey,
+            }}
             >
               <SimpleLineIcons name="pie-chart" size={18} color={color} />
             </View>
@@ -52,35 +54,37 @@ const Layout = () => {
         options={{
           tabBarIcon: ({ color, size, focused }) => (
             <View
-              style={{
-                padding: 12,
-                borderRadius: 30,
-                backgroundColor: focused ? Colors.tintColor : Colors.grey,
-              }}
+            style={{
+              padding: 12,
+              borderRadius: 30,
+              backgroundColor: focused ? Colors.tintColor : Colors.grey,
+            }}
             >
               <FontAwesome name="user-o" size={18} color={color} />
             </View>
           ),
         }}
-      />
+        />
 
       <Tabs.Screen
         name="transactions"
         options={{
           tabBarIcon: ({ color, size, focused }) => (
             <View
-              style={{
-                padding: 12,
-                borderRadius: 30,
-                backgroundColor: focused ? Colors.tintColor : Colors.grey,
-              }}
+            style={{
+              padding: 12,
+              borderRadius: 30,
+              backgroundColor: focused ? Colors.tintColor : Colors.grey,
+            }}
             >
               <AntDesign name="swap" size={18} color={color} />
             </View>
           ),
         }}
-      />
+        />
     </Tabs>
+    <StatusBar style="light" />
+  </>
   );
 };
 
