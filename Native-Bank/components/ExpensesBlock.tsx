@@ -11,7 +11,7 @@ const ExpenseBlock = ({expenseList} : {expenseList : ExpenseType[]}) => {
                 <TouchableOpacity onPress={() => {}}>
                     <View style={styles.addItemBtn}>
                         <Feather name="plus" size={22} color={'#ccc'} />
-                        <Text>Add Item</Text>
+                        <Text style={{color: Colors.white}}>Add Item</Text>
                     </View>
                 </TouchableOpacity>
             )
