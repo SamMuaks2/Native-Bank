@@ -1,11 +1,15 @@
-import { FlatList, ListRenderItemInfo, StyleSheet, Text, View } from "react-native";
+import { FlatList, ListRenderItem, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import Colors from "@/constants/Colors";
 import { IncomeType } from "@/types";
 
-const IncomeBlock = ({incomeList} : {incomeList: IncomeType}) => {
-    function renderItem(info: ListRenderItemInfo<any>): ReactElement<any, string | JSXElementConstructor<any>> | null {
-        throw new Error("Function not implemented.");
+const IncomeBlock = ({incomeList} : {incomeList: IncomeType[]}) => {
+    const renderItem:ListRenderItem<IncomeType> = ({item}) => {
+        return(
+            <View>
+                <Text style={{color: Colors.white}}>{item.name}</Text>
+            </View>
+        );
     }
 
     return (
