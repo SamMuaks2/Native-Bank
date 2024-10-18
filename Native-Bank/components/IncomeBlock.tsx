@@ -8,7 +8,7 @@ import amount from "../data/income.json";
 
 const IncomeBlock = ({incomeList} : {incomeList: IncomeType[]}) => {
     const renderItem:ListRenderItem<IncomeType> = ({item, index}) => {
-        let amount = item.amount.split('.');
+        let [integerPart, decimalPart] = item.amount.split('.');
         return(
             <View style={{backgroundColor: Colors.grey, padding: 20, borderRadius: 20, marginRight: 15, width: 150, gap: 10,}}>
                 <View style={{flexDirection: 'row', justifyContent: 'space-between', alignItems: 'center'}}>
@@ -21,8 +21,10 @@ const IncomeBlock = ({incomeList} : {incomeList: IncomeType[]}) => {
                 </TouchableOpacity>
                 </View>
                 <Text style={{color: Colors.white}}>{item.name}</Text>
-                <Text style={{color: Colors.white, fontSize: 18, fontWeight: "600",}}>${item.amount [0]}.
-                    <Text style={{fontSize:14, fontWeight: '400'}}>{item.amount [1]}</Text></Text>
+                <Text style={{color: Colors.white, fontSize: 18, fontWeight: "600",}}>${integerPart}{decimalPart ? (
+                    <Text style={{fontSize:14, fontWeight: '400'}}>.{decimalPart}</Text>
+                ) : null}
+                </Text>
             </View>
         );
     }
