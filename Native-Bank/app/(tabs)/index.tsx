@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Colors from "@/constants/Colors";
 import { Stack } from "expo-router";
 import Header from "@/components/Header";
@@ -10,6 +10,9 @@ import IncomeBlock from "@/components/IncomeBlock";
 import incomeList from "@/data/income.json";
 import SpendingBlock from "@/components/SpendingBlock";
 import spendingList from "@/data/spending.json";
+import transactionsData from "@/data/transactions.json";
+import Transactions from "./transactions";
+import { TransactionsType } from "@/types";
 
 const Page = () => {
   const pieData = [
@@ -36,6 +39,12 @@ const Page = () => {
       text: ""
     }
   ];
+
+  const [transactionsList, setTransactionsList] = useState<TransactionsType[]>([]);
+
+  useEffect(() => {
+    setTransactionsList(transactionsData);
+  }, []);
 
   return (
     <>
@@ -81,6 +90,8 @@ const Page = () => {
         <IncomeBlock incomeList={incomeList} />
 
         <SpendingBlock spendingList={spendingList} />
+
+        <Transactions transactionsList={transactionsList} />
       </ScrollView>
     </View>
     </>

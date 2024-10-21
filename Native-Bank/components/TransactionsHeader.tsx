@@ -15,7 +15,7 @@ import { ArrowDownIcon } from "@/constants/icons";
         <View style={styles.wrapper}>
           <View style={styles.userInfoContainer}>
             <View style={styles.userTextWrapper}>
-              <Text style={{ color: Colors.white, fontSize: 16 }}>
+              <Text style={{ color: Colors.white, fontSize: 20, fontWeight: '700' }}>
                 Transactions
               </Text>
             </View>

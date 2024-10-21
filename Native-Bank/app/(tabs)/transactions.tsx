@@ -5,7 +5,7 @@ import { TransactionsType } from "@/types";
 import { Stack } from "expo-router";
 import TransactionsHeader from "@/components/TransactionsHeader";
 
-const Transactions = ({transactionsList} : {transactionsList: TransactionsType[] }) => {
+const Transactions = ({transactionsList = []} : {transactionsList: TransactionsType[] }) => {
    
   return (
     <>
@@ -21,7 +21,7 @@ const Transactions = ({transactionsList} : {transactionsList: TransactionsType[]
               <Text style={{fontSize: 12, fontWeight: '300', color: Colors.grey}}>{item.date}</Text>
             </View>
 
-            <Text>${item.amount}</Text>
+            <Text style={styles.text}>${item.amount}</Text>
           </View>
       )
     })}
