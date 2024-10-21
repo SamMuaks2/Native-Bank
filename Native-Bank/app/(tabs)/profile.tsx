@@ -1,16 +1,33 @@
-import { StyleSheet, Text, View } from "react-native";
+import {
+  ScrollView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React from "react";
 import Colors from "@/constants/Colors";
 import { Stack } from "expo-router";
+import ProfileHeader from "@/components/ProfileHeader";
 
 const Profile = () => {
   return (
     <>
-      <Stack.Screen options={{ headerShown: false }} />
+      <Stack.Screen
+        options={{ headerShown: true, header: () => <ProfileHeader /> }}
+      />
       <View style={styles.container}>
-        <Text style={styles.text}>Profile???</Text>
-        <Text style={styles.text}>But come first, you fill anything?</Text>
-        <Text style={styles.text}>No worry, your mind go dey!</Text>
+        <ScrollView showsVerticalScrollIndicator={false}>
+          <View style={styles.innerWrapper}>
+            <View>
+              place icons
+              <Text>Transaction History</Text>
+              <TouchableOpacity onPress={() => {}}>
+                <Text></Text>
+              </TouchableOpacity>
+            </View>
+          </View>
+        </ScrollView>
       </View>
     </>
   );
@@ -24,6 +41,9 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: Colors.black,
+  },
+  innerWrapper: {
+    flexDirection: "column",
   },
   text: {
     color: Colors.white,
