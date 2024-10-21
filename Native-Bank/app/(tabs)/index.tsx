@@ -2,7 +2,7 @@ import { View, Text, StyleSheet, ScrollView } from "react-native";
 import React, { useState, useEffect } from "react";
 import Colors from "@/constants/Colors";
 import { Stack } from "expo-router";
-import Header from "@/components/Header";
+import HeaderMain from "@/components/HeaderMain";
 import { PieChart } from "react-native-gifted-charts";
 import ExpenseBlock from "@/components/ExpensesBlock";
 import ExpenseList from "@/data/expenses.json"
@@ -51,7 +51,7 @@ const Page = () => {
   return (
     <>
     <Stack.Screen options={{
-        header: () => <Header />
+        header: () => <HeaderMain />
     }} />
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>

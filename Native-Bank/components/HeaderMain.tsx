@@ -9,7 +9,7 @@ import {
 import React from "react";
 import Colors from "@/constants/Colors";
 
-const Header = () => {
+const HeaderMain = () => {
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.wrapper}>
@@ -37,7 +37,7 @@ const Header = () => {
   );
 };
 
-export default Header;
+export default HeaderMain;
 
 const styles = StyleSheet.create({
   container: {
