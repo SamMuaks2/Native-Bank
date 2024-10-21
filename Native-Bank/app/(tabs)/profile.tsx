@@ -21,7 +21,7 @@ const Profile = () => {
           <View style={styles.innerWrapper}>
             <View>
               place icons
-              <Text>Transaction History</Text>
+              <Text style={styles.text}>Transaction History</Text>
               <TouchableOpacity onPress={() => {}}>
                 <Text></Text>
               </TouchableOpacity>
@@ -41,9 +41,11 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: Colors.black,
+    color: Colors.white
   },
   innerWrapper: {
     flexDirection: "column",
+    paddingVertical: 8,
   },
   text: {
     color: Colors.white,
