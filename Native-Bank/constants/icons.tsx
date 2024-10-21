@@ -20,6 +20,7 @@ import PhoneIcon from "@/assets/icons/phone-solid.svg";
 import AlertIcon from "@/assets/icons/bell-regular.svg";
 import GreaterThanIcon from "@/assets/icons/greater-than-solid.svg";
 import HeadsetIcon from "@/assets/icons/headset-solid.svg";
+import UserIcon from "@/assets/icons/user-regular.svg";
 
 export {
   DollarIcon,
@@ -44,4 +45,5 @@ export {
   AlertIcon,
   GreaterThanIcon,
   HeadsetIcon,
+  UserIcon,
 };

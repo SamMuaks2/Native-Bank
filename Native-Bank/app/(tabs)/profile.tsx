@@ -9,7 +9,7 @@ import React from "react";
 import Colors from "@/constants/Colors";
 import { Stack } from "expo-router";
 import ProfileHeader from "@/components/ProfileHeader";
-import { AlertIcon, CardIcon, ClipboardIcon, GreaterThanIcon, HeadsetIcon, LimitIcon, PhoneIcon, ShieldIcon, StarIcon } from "@/constants/icons";
+import { AlertIcon, CardIcon, ClipboardIcon, GreaterThanIcon, HeadsetIcon, LimitIcon, PhoneIcon, ShieldIcon, StarIcon, UserIcon } from "@/constants/icons";
 
 const Profile = () => {
   return (
@@ -20,6 +20,13 @@ const Profile = () => {
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
           <View style={styles.innerWrapper}>
+            <View style={styles.miniContainer}>
+              <UserIcon width={20} height={20} />
+              <Text style={styles.text}>KYC Status</Text>
+              <TouchableOpacity onPress={() => {}} style={styles.touchableOpacity}>
+                <GreaterThanIcon width={20} height={20} />
+              </TouchableOpacity>
+            </View>
             <View style={styles.miniContainer}>
               <ClipboardIcon width={20} height={20} />
               <Text style={styles.text}>Transaction History</Text>
@@ -106,7 +113,8 @@ const styles = StyleSheet.create({
   innerWrapper: {
     flexDirection: "column",
     paddingVertical: 8,
-    marginTop: 8,
+    marginTop: 12,
+    marginBottom: 12,
     backgroundColor: Colors.grey,
     borderColor: Colors.grey,
     borderWidth: 3,
