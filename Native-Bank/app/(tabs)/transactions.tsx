@@ -56,7 +56,13 @@ const Transactions = ({
             keyExtractor={(item) => item.id.toString()} // Ensure id is unique
             renderItem={({ item }) => (
               <View style={styles.miniContainer}>
-                <View style={{ flexDirection: "column" }}>
+                <View
+                  style={{
+                    flexDirection: "column",
+                    justifyContent: "space-between",
+                    gap: 15,
+                  }}
+                >
                   <Text
                     style={{
                       fontSize: 16,
@@ -81,7 +87,6 @@ const Transactions = ({
             )}
           />
         )}
-        <Transactions transactionsList={transactionsList} />
       </View>
     </>
   );
@@ -92,7 +97,11 @@ export default Transactions;
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    marginTop: 95,
+    paddingTop: 55,
+    paddingVertical: 8,
     justifyContent: "center",
+    gap: 30,
     alignItems: "center",
     backgroundColor: Colors.blue,
   },
@@ -100,9 +109,15 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: "row",
     justifyContent: "space-between",
+    gap: 32,
     alignItems: "center",
     backgroundColor: Colors.blue,
     marginTop: 12,
+    borderColor: Colors.grey,
+    borderWidth: 1,
+    borderRadius: 10,
+    padding: 8,
+    width: "90%",
   },
   text: {
     color: Colors.white,
