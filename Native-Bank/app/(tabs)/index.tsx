@@ -43,7 +43,9 @@ const Page = () => {
   const [transactionsList, setTransactionsList] = useState<TransactionsType[]>([]);
 
   useEffect(() => {
-    setTransactionsList(transactionsData);
+    if (transactionsData && Array.isArray(transactionsData)) {
+      setTransactionsList(transactionsData);
+    }
   }, []);
 
   return (
