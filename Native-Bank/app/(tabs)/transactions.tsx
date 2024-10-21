@@ -1,24 +1,31 @@
 import { View, StyleSheet, Text, ScrollView } from "react-native";
 import React from "react";
 import Colors from "@/constants/Colors";
+import { TransactionsType } from "@/types";
 import { Stack } from "expo-router";
 import TransactionsHeader from "@/components/TransactionsHeader";
 
-const Transactions = () => {
+const Transactions = ({transactionsList} : {transactionsList: TransactionsType}) => {
+   
   return (
     <>
       <Stack.Screen options={{ headerShown: true, header: () => <TransactionsHeader /> }} />
       <View style={styles.container}>
         <ScrollView showsVerticalScrollIndicator={false}>
-          <View style={styles.miniContainer}>
+
+          {transactionsList.map((item) => {
+          return (
+          <View style={styles.miniContainer} key={item.id}>
             <View style={{flexDirection: 'column'}}>
-              <Text style={{fontSize: 16, fontWeight: '600', color: Colors.black}}>Debit</Text>
-              <Text style={{fontSize: 12, fontWeight: '300', color: Colors.grey}}>Oct 20th, 02:35:33</Text>
+              <Text style={{fontSize: 16, fontWeight: '600', color: Colors.black}}>{item.type}</Text>
+              <Text style={{fontSize: 12, fontWeight: '300', color: Colors.grey}}>{item.date}</Text>
             </View>
 
-            <Text>$2,300.62</Text>
+            <Text>${item.amount}</Text>
           </View>
-        <Text style={styles.text}>Transactions is in building state</Text>
+      )
+    })}
+    <Text style={styles.text}>Transactions is in building state</Text>
         </ScrollView>
       </View>
     </>
