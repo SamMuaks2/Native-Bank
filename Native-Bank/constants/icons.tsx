@@ -17,6 +17,7 @@ import ClipboardIcon from "@/assets/icons/clipboard-list-solid.svg";
 import StarIcon from "@/assets/icons/star-regular.svg";
 import ShieldIcon from "@/assets/icons/shield-solid.svg";
 import PhoneIcon from "@/assets/icons/phone-solid.svg";
+import AlertIcon from "@/assets/icons/bell-regular.svg";
 import GreaterThanIcon from "@/assets/icons/greater-than-solid.svg";
 import HeadsetIcon from "@/assets/icons/headset-solid.svg";
 
@@ -40,6 +41,7 @@ export {
   StarIcon,
   ShieldIcon,
   PhoneIcon,
+  AlertIcon,
   GreaterThanIcon,
   HeadsetIcon,
 };
