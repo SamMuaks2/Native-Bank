@@ -17,3 +17,10 @@ export interface SpendingType {
     amount: string;
     date: string;
 }
+
+export interface TransactionsType {
+    id: string;
+    type: string;
+    amount: string;
+    date: string;
+},
