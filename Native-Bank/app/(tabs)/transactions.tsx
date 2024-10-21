@@ -5,7 +5,7 @@ import { TransactionsType } from "@/types";
 import { Stack } from "expo-router";
 import TransactionsHeader from "@/components/TransactionsHeader";
 
-const Transactions = ({transactionsList} : {transactionsList: TransactionsType}) => {
+const Transactions = ({transactionsList} : {transactionsList: TransactionsType[] }) => {
    
   return (
     <>
@@ -25,7 +25,7 @@ const Transactions = ({transactionsList} : {transactionsList: TransactionsType})
           </View>
       )
     })}
-    <Text style={styles.text}>Transactions is in building state</Text>
+    
         </ScrollView>
       </View>
     </>

@@ -23,4 +23,4 @@ export interface TransactionsType {
     type: string;
     amount: string;
     date: string;
-},
+}
